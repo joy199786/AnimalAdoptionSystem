@@ -2,8 +2,63 @@
 
 body {
   margin: 0;
-  font-size: 28px;
   background-color: #ff7d89;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.adoption_available{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  overflow-y: scroll;
+}
+
+.adoption_finish{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  overflow-y: scroll;
+}
+
+.adoption_operation{
+  width: 100%;
+  overflow: hidden;
+}
+
+.adoption_operation_left{
+  float: left;
+}
+
+.adoption_operation_right{
+  float: right;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.adoption_operation_left h4{
+  margin: 1.5vh;
+  color: white;
+}
+
+.adoption_operation_right button{
+  margin: 1vh;
+}
+
+.a_animal{
+  width: 22vw;
+  background-color: #ffd1ab;
+  margin: 10px;
+  float: left;
+}
+
+.a_animal img{
+  height: calc(100% / 2);
+  width: calc(100% / 2);
+  display:block;
+  margin:auto;
+}
+
+.a_animal p{
+  text-align: center;
+  
+}

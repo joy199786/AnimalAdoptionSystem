@@ -16,7 +16,7 @@
 		  	<h2>Logo</h2>
 		  </div>
 		  <div class="header_right">
-		  	<h3>hi, <a href="user_info.html">user</a></h3>
+		  	<h3>hi, <a href="user_index.html">user</a></h3>
 		  </div>
 		</div>
 
@@ -29,15 +29,7 @@
 		</div>
 		
 		<div class="content">
-			<ul id="tabs" class="tabs">
-			    <li><div class="active" name="user_foster.html">送養</div></li>
-			    <li><div href="#" name="user_adoption.html">認養</div></li>
-			    <li><div href="#" name="user_receive.html">收信夾</div></li>
-			    <li><div href="#" name="user_second_hand.html">二手用品</div></li>
-			</ul>
-			<div id="content">
-				<iframe src="user_foster.html"></iframe>
-			</div>
+			
 		</div>
 
 		<script>
@@ -45,11 +37,7 @@
 			$(".navbar a").removeClass("active");
 			$(this).addClass("active");
 		});
-		$(".tabs li div").click(function(){
-			$(".tabs li div").removeClass("active");
-			$(this).addClass("active");
-			$(".content iframe").attr('src', $(this).attr("name"));
-		});
+		
 		window.onscroll = function() {myFunction()};
 
 		var navbar = document.getElementById("navbar");
