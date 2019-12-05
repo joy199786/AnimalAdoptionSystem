@@ -16,8 +16,23 @@
 		  	<h2>Logo</h2>
 		  </div>
 		  <div class="header_right">
-		  	<h3>hi, <a href="user_index.html">user</a></h3>
+		  	<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">登入</button>
 		  </div>
+		</div>
+
+		<div id="login" class="modal">
+		  <form class="modal-content animate" action="/action_page.php" method="post">
+		    <div class="imgcontainer">
+		      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+		    </div>
+		    <div class="container">
+		      <label for="uname"><b>Username</b></label>
+		      <input type="text" placeholder="Enter Username" name="uname" required>
+		      <label for="psw"><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" name="psw" required>
+		      <button type="submit" >Login</button>
+		    </div>
+		  </form>
 		</div>
 
 		<div id="navbar" class="navbar">
@@ -29,6 +44,16 @@
 		</div>
 
 		<script>
+		// Get the modal
+		var modal = document.getElementById('login');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+
 		$(".navbar a").click(function(){
 			$(".navbar a").removeClass("active");
 			$(this).addClass("active");
