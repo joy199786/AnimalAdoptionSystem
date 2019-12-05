@@ -8,12 +8,16 @@ body {
 
 .foster_available{
   width: 50%;
+  height: 100vh;
   float: left;
+  overflow-y: scroll;
 }
 
 .foster_finish{
   width: 50%;
+  height: 100vh;
   float: left;
+  overflow-y: scroll;
 }
 
 .foster_operation{
@@ -41,9 +45,10 @@ body {
 }
 
 .a_animal{
-  width: 45%;
+  width: 22vw;
   background-color: #ffd1ab;
   margin: 10px;
+  float: left;
 }
 
 .a_animal img{
