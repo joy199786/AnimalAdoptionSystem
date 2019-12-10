@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+
+<html>
+<body>
+  動物種類: <input type="text" id="animal_kind"> <br>
+  動物品種: <input type="text" id="animal_type"><br>
+  地點: <input type="text" id="animal_place"><br>
+<button type="button" onclick="insert_animal()">確認新增</button>
+<script>
+function insert_animal(id){
+	var kind = document.getElementById("animal_kind");
+	var type = document.getElementById("animal_type");
+	var place = document.getElementById("animal_place");
+        alert(kind.value+"\n"+type.value+"\n"+place.value);
+	
+	
+}
+</script>
+
+</body>
+</html>
