@@ -101,10 +101,15 @@ body {
   float: left;
 }
 
+#tabs span {
+  float: right;
+  padding: 0vw 4vw;
+}
+
 .tabs div {
   position: relative;
   background: #ffae6b;
-  float: left;
+  
   text-decoration: none;
   padding:  12px 20px;
   color: white;
