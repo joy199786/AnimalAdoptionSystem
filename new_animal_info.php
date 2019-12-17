@@ -15,7 +15,8 @@
 		<div class="context">
 			<div class="title">動物基本資料</div>
 			<p>是否開放認養: <input type="text" name=""></p><br>
-			<p>動物類別: <input type="text" name=""></p><br>
+			<p>動物種類: <input type="text" name=""></p><br>
+			<p>動物品種: <input type="text" name=""></p><br>
 			<p>動物性別: <input type="text" name=""></p><br>
 			<p>動物年齡: <input type="text" name=""></p><br>
 			<p>地區: <input type="text" name=""></p><br>
