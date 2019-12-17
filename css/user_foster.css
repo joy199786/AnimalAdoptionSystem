@@ -66,7 +66,10 @@ body {
 .a_animal img{
   height: calc(100% / 2);
   width: calc(100% / 2);
-  display:block;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  
   margin:auto;
   padding: 0.5vw;
 }

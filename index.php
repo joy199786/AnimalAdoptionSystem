@@ -26,9 +26,9 @@
 		      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
 		    </div>
 		    <div class="container">
-		      <label for="uname"><b>Username</b></label>
+		      <label for="uname"><b>帳號</b></label>
 		      <input type="text" placeholder="Enter Username" name="uname" required>
-		      <label for="psw"><b>Password</b></label>
+		      <label for="psw"><b>密碼</b></label>
 		      <input type="password" placeholder="Enter Password" name="psw" required>
 		      <button type="submit" >Login</button>
 		    </div>
