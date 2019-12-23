@@ -11,7 +11,7 @@
 		</script>
 	</head>
 	<body>
-		<button class="back" onclick="javascript:history.back()">返回</button>
+		<button class="back" onclick="back()">返回</button>
 		<div class="context">
 			<div class="title">動物基本資料</div>
 			<p>是否開放認養: </p><br>
@@ -23,5 +23,11 @@
 			<p>晶片號碼: </p><br>
 			<p>認養條件: </p><br>
 		</div>
+		
+		<script>
+			function back() {
+				window.history.back();
+			}
+		</script>
 	</body>
 </html>
