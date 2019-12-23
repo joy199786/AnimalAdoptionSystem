@@ -13,7 +13,7 @@
 	<body>
 		<div class="header">
 		  <div class="header_left">
-		  	<h2>Logo</h2>
+		  	<h2>動物認養系統</h2>
 		  </div>
 		  <div class="header_right">
 		  	<h3>hi, <a href="user_index.php">user</a></h3>

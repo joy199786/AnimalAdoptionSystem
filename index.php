@@ -13,7 +13,7 @@
 	<body>
 		<div class="header">
 		  <div class="header_left">
-		  	<h2>Logo</h2>
+		  	<h2>動物認養系統</h2>
 		  </div>
 		  <div class="header_right">
 		  	<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">登入</button>
@@ -36,8 +36,8 @@
 		</div>
 
 		<div id="navbar" class="navbar">
-		  <a class="active" href="index.html">首頁</a>
-		  <a href="#">個人認養</a>
+		  <a class="active" href="index.php">首頁</a>
+		  <a href="person_adoption.php">個人認養</a>
 		  <a href="#">機構認養</a>
 		  <a href="#">遺失協尋</a>
 		  <a href="#">二手用品</a>
