@@ -1,0 +1,40 @@
+//python 抓取api內容存到mongodb中
+import requests 
+import json
+#import time
+import pymongo
+#time.sleep(86400)每天
+#file = open('jtry.json', 'w', encoding='utf-8')
+
+client = pymongo.MongoClient()
+db = client['test']
+collection = db['animals']
+url ='http://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL'
+response = requests.get(url=url,verify=False) 
+content = response.content.decode() 
+content_list = json.loads(content)
+#dic = {'name':'serena',"id":1532}
+#collection.insert_one(dic)
+result = collection.insert_many(content_list)
+print(result.inserted_ids)
+
+
+#for i in range(6): 
+#    url ='https://asms.coa.gov.tw/Asms/api/ViewNowAnimal?pageSize=200&currentPage={}&sortDirection=DESC&sortFields=AcceptDate'.format(i*1)
+#    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36' }
+#url ='http://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL'
+#response = requests.get(url=url,verify=False) 
+#content = response.content.decode() 
+#content_list = json.loads(content)
+    
+    #for item in content_list:
+    #    arryitem=[]
+    #    arryitem.append(item['animal_id'])
+    #    arryitem.append(item['animal_kind'])
+    #    arryitem.append(item['animal_colour'])
+    #    arryitem.append(item['animal_foundplace'])
+    #    arryitem.append(item['animal_createtime'])
+    #    arryitem.append(item['shelter_address'])
+#file.write(json.dumps(content_list, ensure_ascii=False, indent=2))
+    
+#file.close()  
