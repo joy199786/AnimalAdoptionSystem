@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="a_animal">
-				<a href="animal_info.php"><img src="https://asms.coa.gov.tw/Amlapp/Upload/pic/79866ec4-0259-4c05-83fd-ec4ff90893ca.jpg" alt="no image" onerror=this.src="ui_img/no_image.png"></a>
+				<a href="animal_info.php"><img src="https://asms.coa.gov.tw/Amlapp/Upload/pic/79866ec4-0259-4c05-83fd-ec4ff90893ca.jpg" alt="no image" onerror=this.src="ui_img/no_image.png" mode='aspectFill'></a>
 				<p>種類：</p>
 				<p>品種：</p>
 				<p>地區：</p>
