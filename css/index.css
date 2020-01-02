@@ -88,6 +88,11 @@ button:hover {
   padding: 16px;
 }
 
+.container p {
+	text-align: center;
+	font-size: 10px;
+}
+
 span.psw {
   float: right;
   padding-top: 16px;
@@ -113,7 +118,8 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  width: 30%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -199,20 +205,11 @@ span.psw {
   color: white;
 }
 
-.content {
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-#content {
-  
+#content iframe{
+  position: absolute;
+  bottom: 0;
+  border: none;
+  width: 100vw;
+  height: 80vh;
+  z-index: -1;
 }
