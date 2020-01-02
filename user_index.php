@@ -42,28 +42,15 @@
 		  <a href="#">二手用品</a>
 		</div>
 		
-		<div class="content">
-			<ul id="tabs" class="tabs">
-			    <li><div class="active" name="user_foster.php">送養</div></li>
-			    <li><div name="user_adoption.php">認養</div></li>
-			    <li><div name="user_receive.php">收信夾</div></li>
-			    <li><div name="user_second_hand.php">二手用品</div></li>
-			    <span><li><div name="user_info.php">個人資料</div></li></span>
-			</ul>
-			<div id="content">
-				<iframe src="user_foster.php"></iframe>
-			</div>
+		<div id="content">
+			<iframe src="user_index_content.php"></iframe>
 		</div>
 
 		<script>
 		$(".navbar a").click(function(){
 			$(".navbar a").removeClass("active");
 			$(this).addClass("active");
-		});
-		$(".tabs li div").click(function(){
-			$(".tabs li div").removeClass("active");
-			$(this).addClass("active");
-			$(".content iframe").attr('src', $(this).attr("name"));
+			$("#content iframe").attr('src', $(this).attr("name"));
 		});
 		window.onscroll = function() {myFunction()};
 

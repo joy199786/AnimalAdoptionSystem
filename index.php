@@ -28,7 +28,10 @@
 		  else//已登入顯示帳號
 		  {
 			echo '<div class="header_right">';
-		  	echo '<h3>hi, <a href="user_index.php">';print_r($_SESSION['account']);echo '</a></h3>';
+		  	echo '<h3>hi, <a class="dropdown" href="user_index.php">';print_r($_SESSION['account']);echo '</a></h3>';
+			echo '<div class="dropdown_content">';
+			echo '<a href="#"><h3>登出</h3></a>';
+			echo '</div>';
 			echo '</div>';
 		  }
 		  ?>
@@ -79,9 +82,7 @@
 			$("#content iframe").attr('src', $(this).attr("name"));
 		});
 		
-		$(".userinfo").click(function(){
-			$("#content iframe").attr('src', $(this).attr("user_index.php"));
-		});
+		
 		
 		</script>
 		
