@@ -1,18 +1,19 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>-
+
 <!DOCTYPE html>
 <html>
 <body>
 <?php
 echo "公告:"."<br>";
 ?>
-<textarea style="background-color:#C9FFFF; border:2px green solid;"  name="content" cols="50" rows="10" >
+<pre>
 <?php
 // Echo session variables that were set on previous page
-echo $_SESSION["announcement"] ;
+if(!isset($_COOKIE["announcement"])) {
+    echo "announcement is not set!";
+} else {
+    echo $_COOKIE["announcement"];
+}
 ?>
-</textarea>
+</pre>
 </body>
 </html>

@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 
 
@@ -22,11 +20,14 @@ session_start();
 			<div class="title">布告欄</div>
 			<!--<p>title: <input type="text" name="title"></p><br>
 			-->
-			<p>內容:</p> <textarea name="content" cols="50" rows="10"  required><?php
+			<p>內容:</p> <textarea name="content" cols="80" rows="20"  required><?php
 						// Echo session variables that were set on previous page
-						echo $_SESSION["announcement"] ;
-						?>
-						</textarea>
+						if(!isset($_COOKIE["announcement"])) {
+								echo "announcement is not set!";
+							} else {
+								echo $_COOKIE["announcement"];
+							}
+						?></textarea>
 			<input type="submit" name="sendBtn" value="送出"/>
 			</form>
 		</div>

@@ -1,24 +1,13 @@
 <?php
-session_start();
-
 if($_POST['sendBtn']){
 	if($_POST['content'] != ""){
-		$_SESSION["announcement"] = $_POST['content'];
+		setcookie("announcement",$_POST['content'] ,time() + (10 * 365 * 24 * 60 * 60));
 	}
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 <body>
-<?php
-echo "公告:"."<br>";
-?>
-<textarea style="background-color:#C9FFFF; border:2px green solid;"  name="content" cols="50" rows="10" >
-<?php
-// Echo session variables that were set on previous page
-echo $_SESSION["announcement"] ;
-?>
-</textarea>
+<a href="http://localhost/animal/showannouncement.php">顯示</a>
 </body>
 </html>
