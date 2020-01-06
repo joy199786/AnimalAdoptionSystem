@@ -16,24 +16,21 @@
 		<div id="navbar" class="navbar">
 		<a href="new_announcement_info.php">公告</a>
 		<a href="#">用戶管理</a>
-		<a href="new_message_info.php">發送訊息</a>
+		<a href="#">發送訊息</a>
 		</div>
 		<div class="context">
-			<form  action="insert_announcement_data.php" enctype="multipart/form-data" method="post">
+			<form  action="insert_message_data.php" enctype="multipart/form-data" method="post">
 			
 			<div class="textArea">
-				<h1>目前內容</h1>
+				<h1>信件</h1>
 				<!--<p>title: <input type="text" name="title"></p><br>
 				-->
+				<!--<p>用戶: <input type="text" name="account" required></p><br>
+				-->
 				
-				<textarea name="content" cols="60" rows="10"  required><?php
-							// Echo session variables that were set on previous page
-							if(!isset($_COOKIE["announcement"])) {
-									echo "announcement is not set!";
-								} else {
-									echo $_COOKIE["announcement"];
-								}
-							?></textarea>
+				<p>標題: <input style="width: 500px;"  type="text" name="title" required></p><br>
+				<textarea name="content" cols="80" rows="10"  required>
+				</textarea>
 				<input type="submit" name="sendBtn" value="送出"/>
 			</div>
 			</form>
