@@ -30,7 +30,7 @@
 			echo '<div class="header_right">';
 		  	echo '<h3>hi, <a class="dropdown" href="user_index.php">';print_r($_SESSION['account']);echo '</a></h3>';
 			echo '<div class="dropdown_content">';
-			echo '<a href="#"><h3>登出</h3></a>';
+			echo '<a href="session uset.php"><h3>登出</h3></a>';
 			echo '</div>';
 			echo '</div>';
 		  }
