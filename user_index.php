@@ -17,27 +17,15 @@
 		  	<h2>動物認養系統</h2>
 		  </div>
 		</a>
-		   <?php 
-		  session_start();
-		  if(empty($_SESSION['account']))//未登入顯示登入鈕
-		  {
-			echo '<div class="header_right">';
-		  	echo '<button onclick="document.getElementById(\'login\').style.display=\'block\'" style="width:auto;">登入</button>';
-			echo '</div>';
-		  }
-		  else//已登入顯示帳號
-		  {
-			echo '<div class="header_right">';
-		  	echo '<h3>hi, <a href="user_index.php">';print_r($_SESSION['account']);echo '</a></h3>';
-			echo '</div>';
-		  }
-		  ?>
+		  <div class="header_right">
+		  	<h3>hi, <a href="user_index.php"><?php session_start();print_r($_SESSION['user_name']);?></a></h3>
+		  </div>
 		</div>
 
 		<div id="navbar" class="navbar">
-		  <a class="active" href="#" name="index_content.php">首頁</a>
+		  <a class="active" href="index.php">首頁</a>
 		  <a href="#" name="person_adoption.php">個人認養</a>
-		  <a href="#" name="agency_adoption.php">機構認養</a>
+		  <a href="#" name="mechanism_adoption.php">機構認養</a>
 		  <a href="#">遺失協尋</a>
 		  <a href="#">二手用品</a>
 		</div>

@@ -17,7 +17,7 @@
 		  	<h2>動物認養系統</h2>
 		  </div>
 		</a>
-		   <?php 
+		  <?php 
 		  session_start();
 		  if(empty($_SESSION['account']))//未登入顯示登入鈕
 		  {
@@ -28,16 +28,19 @@
 		  else//已登入顯示帳號
 		  {
 			echo '<div class="header_right">';
-		  	echo '<h3>hi, <a class="dropdown" href="user_index.php">';print_r($_SESSION['account']);echo '</a></h3>';
+			if($_SESSION['admin']=="False")
+			{echo '<h3>hi, <a class="dropdown" href="user_index.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
+			else
+			{echo '<h3>hi, <a class="dropdown" href="admin.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
 			echo '<div class="dropdown_content">';
-			echo '<a href="#"><h3>登出</h3></a>';
+			echo '<a href="logout.php"><h3>登出</h3></a>';
 			echo '</div>';
 			echo '</div>';
 		  }
 		  ?>
-		</div>
-
-		<div id="login" class="modal">
+		  </div>
+		  
+		  <div id="login" class="modal">
 		  <form class="modal-content animate" action="login_decide.php" method="post">
 		    <div class="imgcontainer">
 		      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -45,26 +48,26 @@
 		    <div class="container">
 		      <label for="account"><b>帳號</b></label>
 		      <input type="text" placeholder="輸入電子信箱" name="account" required>
-		      <label for="psd"><b>密碼</b></label>
+		      <label for="psd"><b>密碼:</b></label>
 		      <input type="password" placeholder="輸入密碼" name="psd" required>
-		      <button type="submit">登入</button>
-			  <p>沒有帳戶嗎？點<a href="#">這裡</a>註冊新帳戶</p>
+		      <button type="submit" >登入</button>
+			  <p>沒有帳戶嗎？點<a href="#" name="user_register.php">這裡</a>註冊新帳戶</p>
 		    </div>
 		  </form>
 		</div>
-
+		
 		<div id="navbar" class="navbar">
 		  <a class="active" href="#" name="index_content.php">首頁</a>
 		  <a href="#" name="person_adoption.php">個人認養</a>
-		  <a href="#" name="agency_adoption.php">機構認養</a>
+		  <a href="#" name="mechanism_adoption.php">機構認養</a>
 		  <a href="#">遺失協尋</a>
 		  <a href="#">二手用品</a>
 		</div>
-		
+
 		<div id="content">
 			<iframe src="index_content.php"></iframe>
 		</div>
-
+		
 		<script>
 		// Get the modal
 		var modal = document.getElementById('login');
@@ -82,7 +85,10 @@
 			$("#content iframe").attr('src', $(this).attr("name"));
 		});
 		
-		
+		$(".container a").click(function(){
+			$("#content iframe").attr('src', $(this).attr("name"));
+			modal.style.display = "none";
+		});
 		
 		</script>
 		

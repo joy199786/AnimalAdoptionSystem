@@ -13,12 +13,12 @@
 	<body>
 		<div id="mySidenav" class="sidenav">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
-			<form action="person_adoption.php" method="get">	
-			<p>性別：<br><input class="radio" type="radio" value="*" name="gender" checked>不拘
-					 <input class="radio" type="radio" value="男" name="gender">男
-					 <input class="radio" type="radio" value="女" name="gender">女
-					 <input class="radio" type="radio" value="無法告知" name="gender">無法告知</p><br>
-			<p>動物類別: <br><select name="pet_type">
+			<form action="admin_pet.php" method="get">	
+			<p>性別：<input type="radio" value="*" name="gender" checked>不拘
+					 <input type="radio" value="男" name="gender">男
+					 <input type="radio" value="女" name="gender">女
+					 <input type="radio" value="無法告知" name="gender">無法告知</p><br>
+			<p>動物類別: <select name="pet_type">
 						 <option value="*">全選</option>
 						 <option value="狗">狗</option>
 						 <option value="貓">貓</option>
@@ -27,7 +27,7 @@
 						 <option value="其他">其他</option>
 						 </select></p><br>
 			<p>動物品種: <input type="text" name="pet_name"></p><br>
-			<p>地區:<br><select name="area">
+			<p>地區:<select name="area">
 					<option value="*">全選</option>
 					<option value="基隆市">基隆市</option>
 					<option value="台北市">台北市</option>
@@ -52,7 +52,7 @@
 					<option value="金門縣">金門縣</option>
 					<option value="連江縣">連江縣</option>
 					</select></p><br>
-			<button class="filter_search">搜尋</button>
+			<button>搜尋</button>
 			</form>
 		</div>
 		
@@ -126,7 +126,8 @@
 					echo	'<p>品種：';print_r($doc['pet_name']);echo'</p>';
 					echo	'<p>地區：';print_r($doc['area']);echo'</p>';
 					echo	'<p>性別：';print_r($doc['gender']);echo'</p>';
-					echo    '<button type="button" onclick="top.location.href=\'adoption_form.php?_id=';print_r($ID);echo '\'">申請認養</button>';
+					echo	'<button type="button" onclick="location.href=';echo '\'';echo 'updata_Opet_data.php?_id=';print_r($ID);echo '\'">修改</button>
+							 <button type="button" onclick="location.href=';echo '\'';echo 'delete_Opet_data.php?_id=';print_r($ID);echo '\'">刪除</button>';
 					echo	'</div>';	
 				};	
 			?>
