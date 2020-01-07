@@ -13,7 +13,7 @@ if(preg_match("/所有人/i", $account))
 		$doc = (array)$document;
 		$bulk = new MongoDB\Driver\BulkWrite; //設定寫入變數
 		$bulk->insert(['account' => $doc['account'],//使用者登陸後儲存使用者id之類的常用資料。一旦儲存到SESSION中，其他頁面都可以通過SESSION獲取,SESSION的使用要開啟session
-					   'from' => '管理員',//寫入資料設定
+					   'from' => '毛毛管理員',//寫入資料設定
 					   'title' => $_POST['title'],
 					   'message' => $_POST['message'],
 					   'time' => $time
@@ -28,7 +28,7 @@ else{
 //session_start();
 	$bulk = new MongoDB\Driver\BulkWrite; //設定寫入變數
 	$bulk->insert(['account' => $_POST['account'],
-				   'from' => '管理員',//寫入資料設定
+				   'from' => '毛毛管理員',//寫入資料設定
 				   'title' => $_POST['title'],
 				   'message' => $_POST['message'],
 					'time' => $time

@@ -34,7 +34,6 @@
 					echo	'<p>地址：';print_r($doc['address']);echo'</p>';
 					echo	'<p>電話：';print_r($doc['phone']);echo'</p>';
 					echo	'<p>是否為管理員：';print_r($doc['admin']);echo'</p>';
-					echo	'<button type="button" onclick="location.href=';echo '\'';echo 'admin_updata_User.php?_id=';print_r($ID);echo '\'">修改</button>';
 					echo	'<button type="button" onclick="location.href=';echo '\'';echo 'admin_delete_User.php?_id=';print_r($ID);echo '\'">刪除</button>';
 					echo	'</div>';	
 				};	

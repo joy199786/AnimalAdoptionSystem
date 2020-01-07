@@ -5,7 +5,7 @@
 		<meta charset = "utf-8">
 		<title>公告</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/new_animal_info.css">
+		<link rel="stylesheet" type="text/css" href="css/new_message_info.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		</script>
@@ -16,20 +16,20 @@
 			<form
   action="admin_email.php" enctype="multipart/form-data" method="post"
 >
-    Your Name:管理員<br>
-  <label>
+    <div class="title">你的姓名:毛毛管理員</div><br>
+  <p>
     你要寄的人(帳號):
     <input type="text" name="account">
-  </label><br>
-  <label>
+  </p><br>
+  <p>
     標題:
     <input type="text" name="title">
-  </label><br>
-  <label>
-    Message:
-    <textarea name="message"></textarea>
-  </label><br>
-  <input type="submit" value="Send">
+  </p><br>
+  <p>
+    信件內容:<br>
+    <textarea name="message" cols="50" rows="10"></textarea>
+  </p><br>
+  <input class="submit" type="submit" value="Send">
 </form>
 		</div>
 
