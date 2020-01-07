@@ -51,7 +51,7 @@
 		      <label for="psd"><b>密碼:</b></label>
 		      <input type="password" placeholder="輸入密碼" name="psd" required>
 		      <button type="submit" >登入</button>
-			  <p>沒有帳戶嗎？點<a href="#" name="user_register.php">這裡</a>註冊新帳戶</p>
+			  <p>沒有帳戶嗎？點<a href="user_register.php">這裡</a>註冊新帳戶</p>
 		    </div>
 		  </form>
 		</div>
@@ -85,10 +85,7 @@
 			$("#content iframe").attr('src', $(this).attr("name"));
 		});
 		
-		$(".container a").click(function(){
-			$("#content iframe").attr('src', $(this).attr("name"));
-			modal.style.display = "none";
-		});
+		
 		
 		</script>
 		

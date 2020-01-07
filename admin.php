@@ -2,18 +2,20 @@
 <html lang="zh-TW" dir="ltr">
 	<head>
 		<meta charset = "utf-8">
-		<title>管理頁面--動物認養系統</title>
+		<title>管理</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/adminView.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
 	</head>
 	<body>
-		<div class="context">
-			<div class="title">管理系統</div>
-			<p>hi,<?php session_start();echo $_SESSION['user_name']?>管理員</p>
-			<button type="button" onclick="location.href='index.php'">首頁</button>
-			<button type="button" onclick="location.href='new_announcement_info.php'">新增公告</button>			
-			<button type="button" onclick="location.href='admin_user.php'">會員管理</button>
-			<button type="button" onclick="location.href='admin_pet.php'">動物管理</button>
-			<button type="button"></button>
-		</div>
+	<div id="navbar" class="navbar">
+	<a href="index.php">首頁</a>
+	<a href="new_announcement_info.php">公告</a>
+	<a href="admin_user.php">用戶管理</a>
+	<a href="new_message_info.php">發送訊息</a>
+	</div>
+
 	</body>
 </html>

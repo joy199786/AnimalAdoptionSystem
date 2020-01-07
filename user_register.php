@@ -23,7 +23,7 @@
 			<p>密碼: <input type="password" name="psd" required></p><br>
 			<p>住址: <input type="text" name="address" required></p><br>
 			<p>電話: <input type="text" name="phone" required></p><br>
-			<button class="submit">送出</button>
+			<button  class="submit">送出</button>
 			</form>
 		</div>
 
