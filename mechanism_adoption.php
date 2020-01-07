@@ -203,6 +203,21 @@
 		  document.getElementById("mySidenav").style.width = "0";
 		  document.getElementById("main").style.marginLeft= "0";
 		}
+		
+		/* Every time the window is scrolled ... */
+		(function scrollFooter() {        
+			var timer;
+			$(window).bind('scroll',function () {
+				clearTimeout(timer);
+				timer = setTimeout( refresh , 1300 );
+				document.getElementById('footer').style.display = "block";
+			});
+			var refresh = function () { 
+				// do stuff
+				document.getElementById('footer').style.display = "none";
+				console.log('Stopped Scrolling'); 
+			};
+		})();
 		</script>
 		
 	</body>

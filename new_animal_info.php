@@ -29,7 +29,7 @@
 						<input type="radio" value="無法告知" name="gender">無法告知
 						</p><br>
 			<p>動物年齡: <input type="text" name="pet_old"></p><br>
-			<p>地區:<select name="area">
+			<p>地區: <select name="area">
 					<option value="基隆市">基隆市</option>
 					<option value="台北市">台北市</option>
 					<option value="新北市">新北市</option>
@@ -58,7 +58,7 @@
 			<p>認養條件: <input type="text" name="condition"></p><br>
 			<p>是否開放送養：<input type="radio" value="是" name="isAdopted" required>是<input type="radio" value="否" name="isAdopted">否<br>
 			<input name="img" size="35" type="file" required><br/>
-			<button>送出</button>
+			<button class="submit">送出</button>
 			</form>
 		</div>
 

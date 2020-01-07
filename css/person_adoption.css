@@ -144,6 +144,8 @@ select{
 	text-align:center;
     /* 展開footer寬度 */
     width: 100%;
+	display: none;
+	background-color: #ff7d89;
 }
 
 .filter_search{
