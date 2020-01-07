@@ -27,11 +27,11 @@
 		  }
 		  else//已登入顯示帳號
 		  {
-			echo '<div class="header_right">';
+			echo '<div class="header_right dropdown">';
 			if($_SESSION['admin']=="False")
-			{echo '<h3>hi, <a class="dropdown" href="user_index.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
+			{echo '<h3>hi, <a style="color:#02e88b" href="user_index.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
 			else
-			{echo '<h3>hi, <a class="dropdown" href="admin.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
+			{echo '<h3>hi, <a style="color:#02e88b" href="admin.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
 			echo '<div class="dropdown_content">';
 			echo '<a href="logout.php"><h3>登出</h3></a>';
 			echo '</div>';
