@@ -4,7 +4,7 @@
 echo 
 '<script>
 if(confirm("公告修改成功，回首頁查看嗎?"))
-{location.replace("index.php");}
+{location.replace("index_content.php");}
 else
 {location.replace("admin.php");}
 </script>';
