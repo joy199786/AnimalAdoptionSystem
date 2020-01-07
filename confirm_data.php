@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-
+ session_start();
 	if(!empty($_POST['number']) && !empty($_COOKIE['confirmNum']) ){
 		if($_POST['number'] == $_COOKIE["confirmNum"]){			
 
@@ -35,6 +35,7 @@
 		if(!empty($_POST['account'])){
 			$confirmNum = rand();
 			setcookie("confirmNum",$confirmNum ,time()+600);
+			$_SESSION['account']=$_POST['account'];
 			$account=$_POST['account'];
 			$url='https://formspree.io/'.$account;
 			echo '<div class="context">
