@@ -1,5 +1,11 @@
 <?php
 //imgur API新增圖片之url
+if(empty($_SESSION['account']))
+{
+	echo '<script>alert("請先登入");</script>';
+	header("refresh:0;url=Available_second_hand.php");
+}
+else{
 $img=$_FILES['img'];
 if($img['name']=='')
 {  
@@ -44,5 +50,5 @@ $bulk->insert(['account' => $_SESSION['account'],//使用者登陸後儲存使�
 			   'img' => $url
 			   ]);
 $manager->executeBulkWrite('mydb.second',$bulk);//$manager->executeBulkWrite('寫入db.寫入資料表', $前面設的寫入變數);
-echo '<script>location.replace("user_second_hand.php");</script>';
+echo '<script>location.replace("user_second_hand.php");</script>';}
 ?>
