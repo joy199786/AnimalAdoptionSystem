@@ -18,7 +18,7 @@
 					 <input class="radio" type="radio" value="M" name="gender">男
 					 <input class="radio" type="radio" value="F" name="gender">女
 					 <input class="radio" type="radio" value="N" name="gender">無法告知</p><br>
-			<p>動物類別: <br><select name="pet_type">
+			<p>動物類別:<br> <select name="pet_type">
 						 <option value="*">全選</option>
 						 <option value="狗">狗</option>
 						 <option value="貓">貓</option>
@@ -142,7 +142,7 @@
 					echo	'<a href="';echo $url;echo '" target="_blank()"><img src="';print_r($doc['album_file']);echo '" alt="no image" onerror=this.src="ui_img/no_image.png"></a>';
 					echo	'<p id="pet_id">類別：';print_r($doc['animal_kind']);echo'</p>';
 					echo	'<p>品種：';print_r($doc['animal_colour']);echo'</p>';
-					echo	'<p><br>地區：';print_r($doc['shelter_name']);echo'</p>';
+					echo	'<p>地區：<br>';print_r($doc['shelter_name']);echo'</p>';
 					echo	'<p>性別：';print_r($doc['animal_sex']);echo'</p>';
 					echo    '<button type="button" onclick="top.location.href=\'';echo $url;echo '\'">申請認養</button>';
 					echo	'</div>';
@@ -203,6 +203,21 @@
 		  document.getElementById("mySidenav").style.width = "0";
 		  document.getElementById("main").style.marginLeft= "0";
 		}
+		
+		/* Every time the window is scrolled ... */
+		(function scrollFooter() {        
+			var timer;
+			$(window).bind('scroll',function () {
+				clearTimeout(timer);
+				timer = setTimeout( refresh , 1300 );
+				document.getElementById('footer').style.display = "block";
+			});
+			var refresh = function () { 
+				// do stuff
+				document.getElementById('footer').style.display = "none";
+				console.log('Stopped Scrolling'); 
+			};
+		})();
 		</script>
 		
 	</body>
