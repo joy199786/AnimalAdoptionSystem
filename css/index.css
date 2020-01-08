@@ -102,7 +102,7 @@ span.psw {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 11; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -223,7 +223,7 @@ span.psw {
   position: absolute;
   background-color: #0acc3e;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 0vw 1.5vw;
+  margin: 0vw 1vw;
   z-index: 10;
   transition: 0.5s linear;
 }

@@ -126,8 +126,7 @@
 					echo	'<p>品種：';print_r($doc['pet_name']);echo'</p>';
 					echo	'<p>地區：';print_r($doc['area']);echo'</p>';
 					echo	'<p>性別：';print_r($doc['gender']);echo'</p>';
-					echo	'<button type="button" onclick="location.href=';echo '\'';echo 'updata_Opet_data.php?_id=';print_r($ID);echo '\'">修改</button>
-							 <button type="button" onclick="location.href=';echo '\'';echo 'delete_Opet_data.php?_id=';print_r($ID);echo '\'">刪除</button>';
+					echo	'<button type="button" onclick="location.href=';echo '\'';echo 'delete_Opet_data.php?_id=';print_r($ID);echo '\'">刪除</button>';
 					echo	'</div>';	
 				};	
 			?>
@@ -187,6 +186,21 @@
 		  document.getElementById("mySidenav").style.width = "0";
 		  document.getElementById("main").style.marginLeft= "0";
 		}
+		
+		/* Every time the window is scrolled ... */
+		(function scrollFooter() {        
+			var timer;
+			$(window).bind('scroll',function () {
+				clearTimeout(timer);
+				timer = setTimeout( refresh , 1300 );
+				document.getElementById('footer').style.display = "block";
+			});
+			var refresh = function () { 
+				// do stuff
+				document.getElementById('footer').style.display = "none";
+				console.log('Stopped Scrolling'); 
+			};
+		})();
 		</script>
 		
 	</body>
