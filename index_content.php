@@ -10,6 +10,10 @@
 		</script>
 	</head>
 	<body>
+	<br/>
+	<br/>
+	<br/>
+	
 	<?php include'showannouncement.php';?>
 	</body>
 </html>
