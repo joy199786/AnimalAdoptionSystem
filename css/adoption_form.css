@@ -63,3 +63,19 @@ input {
 	position:relative;
 	top:6px;
 }
+
+.img
+{
+	position:absolute;
+	left:75%;
+	top:20%;
+}
+.img img{
+  object-fit: cover;
+  height: 20vw;
+  width: 20vw;
+  border-radius: 20px;
+  display:block;
+  margin:auto;
+  padding: 0.5vw;
+}

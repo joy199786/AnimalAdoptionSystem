@@ -160,3 +160,15 @@ select{
   width: 5vw;
 }
 
+.new{
+  position:relative;
+  margin-left: 1vw;
+  background-color: #ff7d89;
+  color: black;
+  padding: 1vw;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 5vw;
+}
+

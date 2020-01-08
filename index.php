@@ -29,9 +29,9 @@
 		  {
 			echo '<div class="header_right dropdown">';
 			if($_SESSION['admin']=="False")
-			{echo '<h3>hi, <a style="color:#02e88b" href="user_index.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
+			{echo '<h3>hi, <a style="color:#02e88b" href="user_index.php">';print_r($_SESSION['nName']);echo '</a></h3>';}
 			else
-			{echo '<h3>hi, <a style="color:#02e88b" href="admin.php">';print_r($_SESSION['user_name']);echo '</a></h3>';}
+			{echo '<h3>hi, <a style="color:#02e88b" href="admin.php">';print_r($_SESSION['nName']);echo '</a>管理員</h3>';}
 			echo '<div class="dropdown_content">';
 			echo '<a href="logout.php"><h3>登出</h3></a>';
 			echo '</div>';
@@ -51,7 +51,7 @@
 		      <label for="psd"><b>密碼:</b></label>
 		      <input type="password" placeholder="輸入密碼" name="psd" required>
 		      <button type="submit" >登入</button>
-			  <p>沒有帳戶嗎？點<a href="#" name="user_register.php">這裡</a>註冊新帳戶</p>
+			  <p>沒有帳戶嗎？點<a href="#" name="create_account.php">這裡</a>註冊新帳戶</p>
 		    </div>
 		  </form>
 		</div>
@@ -60,8 +60,8 @@
 		  <a class="active" href="#" name="index_content.php">首頁</a>
 		  <a href="#" name="person_adoption.php">個人認養</a>
 		  <a href="#" name="mechanism_adoption.php">機構認養</a>
-		  <a href="#">遺失協尋</a>
-		  <a href="#">二手用品</a>
+		  <a href="#" name="Available_for_findpet.php">遺失協尋</a>
+		  <a href="#" name="Available_second_hand.php">二手用品</a>
 		</div>
 
 		<div id="content">
