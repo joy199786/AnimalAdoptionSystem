@@ -11,13 +11,14 @@
 	</head>
 	<body>
 		<button class="back" onclick="javascript:history.back()">返回</button>
-		<form  action="confirm_data.php" enctype="multipart/form-data" method="post">
 		<div class="context">
+		<form  action="confirm_data.php" enctype="multipart/form-data" method="post">
+		
 			<div class="title">註冊信箱</div>
 			<p>信箱(Email): <input type="email" name="account" required></p><br>
 			<input type="submit" name="sendBtn" value="確認送出"/>
-			</div>
+			
 		</form>
-
+</div>
 	</body>
 </html>

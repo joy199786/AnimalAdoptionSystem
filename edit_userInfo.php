@@ -13,16 +13,17 @@
 	<body>
 		<div class="context">
 		<!--edit user info-->
-		<form action="edit_userInfo.php" method="post">
-		<input type="submit" name="editUserInfo" value="EDIT"/>
+		<form  action="finish_edit_userInfo.php" enctype="multipart/form-data" method="post">
+		
+		
 			<div class="title">個人基本資料</div>
-			<p>姓名:<?php print_r($doc['user_name'])?></p><br>
-			<p>電子郵件:<?php print_r($doc['account'])?></p><br>
-			<p>地址:<?php print_r($doc['address'])?></p><br>
-			<p>電話:<?php print_r($doc['phone'])?></p><br>
-			<p>性別:<?php print_r($doc['gender'])?></p><br>
-			<p>身分證字號:<?php print_r($doc['IDNumber'])?></p><br>
-		</form>
+			<p>帳號(Email):<input type="hidden" ><?php $doc['account'];?></p><br>
+			<p>姓名: <input type="text" name="user_name" required value='<?php echo $doc['user_name'];?>'></p><br>
+			<p>匿名: <input type="text" name="nName"     required value='<?php echo $doc['nName'];?>'></p><br>
+			<p>住址: <input type="text" name="address"   required value='<?php echo $doc['address'];?>'></p><br>
+			<p>電話: <input type="text" name="phone"     required value='<?php echo $doc['phone'];?>'></p><br>
+			<button class="submit">送出</button>
+			</form>
 		</div>
 	</body>
 </html>
