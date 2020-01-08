@@ -17,7 +17,7 @@
 		  	<h2>動物認養系統</h2>
 		  </div>
 		</a>
-		<?php 
+		  <?php 
 		  session_start();
 		  if(empty($_SESSION['account']))//未登入顯示登入鈕
 		  {
@@ -37,10 +37,10 @@
 			echo '</div>';
 			echo '</div>';
 		  }
-		?>
-		</div>
+		  ?>
+		  </div>
 		  
-		<div id="login" class="modal">
+		  <div id="login" class="modal">
 		  <form class="modal-content animate" action="login_decide.php" method="post">
 		    <div class="imgcontainer">
 		      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -55,7 +55,7 @@
 		    </div>
 		  </form>
 		</div>
-
+		
 		<div id="navbar" class="navbar">
 		  <a class="active" href="#" name="index_content.php">首頁</a>
 		  <a href="#" name="person_adoption.php">個人認養</a>
@@ -63,7 +63,7 @@
 		  <a href="#">遺失協尋</a>
 		  <a href="#">二手用品</a>
 		</div>
-		
+
 		<div id="content">
 			<iframe src="user_index_content.php"></iframe>
 		</div>

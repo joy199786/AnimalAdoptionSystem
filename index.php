@@ -21,7 +21,7 @@
 		  session_start();
 		  if(empty($_SESSION['account']))//未登入顯示登入鈕
 		  {
-			echo '<div class="header_right dropdown">';
+			echo '<div class="header_right">';
 		  	echo '<button onclick="document.getElementById(\'login\').style.display=\'block\'" style="width:auto;">登入</button>';
 			echo '</div>';
 		  }

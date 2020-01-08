@@ -28,10 +28,10 @@
 		$url='https://formspree.io/'.$recive;
 		echo '<div class="context_left">
 			<form action="';echo $url;echo '" method="post">	
-			<div class="title">個人基本資料</div>
+			<div class="title">個人基本申請資料</div>
 			<p>姓名: <input type="text" name="user_name" required></p><br>
 			<p>出生日期: <input type="text" name="ago" required></p><br>
-			<p>性別：<input  class="radio" type="radio" value="男" name="gender">男<input  class="radio" type="radio" value="女" name="gender" checked>女
+			<p>性別：<input class="radio" type="radio" value="男" name="gender">男<input class="radio" type="radio" value="女" name="gender" checked>女
 			<p>身分證字號: <input type="text" name="IDNumber" required></p><br>
 			<p>信箱(Email): <input type="email" name="account" required></p><br>
 			<p>住址: <input type="text" name="address" required></p><br>
