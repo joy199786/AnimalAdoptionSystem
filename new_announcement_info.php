@@ -19,14 +19,13 @@
 		<a href="new_message_info.php">發送訊息</a>
 		</div>
 		<div class="context">
+		<div class="textArea">
 			<form  action="insert_announcement_data.php" enctype="multipart/form-data" method="post">
-			
-			<div class="textArea">
 				<h1>目前內容</h1>
 				<!--<p>title: <input type="text" name="title"></p><br>
 				-->
-				
 				<textarea name="content" cols="60" rows="10"  required><?php
+				session_start();
 								$manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axwfm.gcp.mongodb.net/test?retryWrites=true&w=majority");//設定連線
 								$filter = [];//查詢條件
 						$query = new MongoDB\Driver\Query($filter);//設定查詢變數
@@ -35,12 +34,12 @@
 							//設定$doc為陣列才能一一顯示值
 							$doc = (array)$document;
 							echo print_r($doc['announce']);
-							$_SESSION['tmpAnnounce'] = $doc['announce'];
-							//$ID=$document->{'_id'}->__toString();//將MongoDB的ObjectID轉換為字串
+							 $_SESSION['tmpAnnounce'] = $doc['announce'];
+							}
 							?></textarea>
 				<input type="submit" name="sendBtn" value="送出"/>
-			</div>
 			</form>
+			</div>
 		</div>
 
 	</body>

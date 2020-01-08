@@ -19,6 +19,7 @@ $manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axw
 			if(!empty($doc)){
 				echo $doc['announce'];
 			}
+		}
 ?>
 </textarea>
 </pre>
