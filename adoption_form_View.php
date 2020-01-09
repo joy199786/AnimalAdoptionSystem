@@ -13,7 +13,7 @@
 	<body>
 		<div id="mySidenav" class="sidenav">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
-			<form action="adoption_form_Search.php" method="get">	
+			<form action="adoption_form_View.php" method="get">	
 			<p>性別：<br><input class="radio" type="radio" value="*" name="gender" checked>不拘
 					 <input class="radio" type="radio" value="男" name="gender">男
 					 <input class="radio" type="radio" value="女" name="gender">女
