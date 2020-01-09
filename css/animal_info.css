@@ -32,3 +32,19 @@ p {
   padding: 0px;
   margin: 0;
 }
+
+.img
+{
+	position:absolute;
+	left:50%;
+	top:20%;
+}
+.img img{
+  object-fit: cover;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 20px;
+  display:block;
+  margin:auto;
+  padding: 0.5vw;
+}
