@@ -28,7 +28,7 @@ else{
   if($url=="")
   {
    echo "<h2>There's a Problem</h2>";
-   echo $pms['data']['error']; 
+   //echo $pms['data']['error']; 
   }
  }
 

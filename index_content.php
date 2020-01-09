@@ -30,7 +30,7 @@
 	<?php 
 		$manager = new MongoDB\Driver\Manager("mongodb+srv://maomao:maomao123@animal-axwfm.gcp.mongodb.net/test?retryWrites=true&w=majority");//設定連線
 		$filter = [];//查詢條件
-		$option=['limit' => 5,'sort' =>['add_time' => -1]];
+		$option=['limit' => 5,'sort' => ['add_time' => -1]];
 		$query = new MongoDB\Driver\Query($filter,$option);//設定查詢變數
 		$cursor = $manager->executeQuery('mydb.findpet', $query);
 		
@@ -43,7 +43,7 @@
 			foreach ($cursor as $document) {
 			//設定$doc為陣列才能一一顯示值
 			$doc = (array)$document;
-			$ID=$document->{'_id'}->__toString();//將MongoDB的ObjectID轉換為字串
+			//$ID=$document->{'_id'}->__toString();//將MongoDB的ObjectID轉換為字串
 			echo '<li><img class="find" src="';echo print_r($doc['img']);echo '" /></li>';
 			}
 			?>
