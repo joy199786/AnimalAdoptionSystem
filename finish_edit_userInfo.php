@@ -9,31 +9,17 @@ foreach ($cursor as $document) {
 	//設定$doc為陣列才能一一顯示值
 	$doc = (array)$document;
 
-$mongoid=$_SESSION['account'];
-$bulk = new MongoDB\Driver\BulkWrite; //設定寫入變數
-$bulk->update(['account' => ['$eq' => $_SESSION['account']]],
-['$set'=>['user_name' => $_POST['user_name'],//使用者登陸後儲存使用者id之類的常用資料。一旦儲存到SESSION中，其他頁面都可以通過SESSION獲取,SESSION的使用要開啟session
-			   'nName' => $_POST['nName'],//寫入資料設定
-			   'account' => $_SESSION['account'],
-			   'address' => $_POST['address'],
-			   'phone' => $_POST['phone'],
-			   'admin' => "False",
-			   ]]);//寫入資料設定
-}			   
+	$mongoid=$_SESSION['account'];
+	$bulk = new MongoDB\Driver\BulkWrite; //設定寫入變數
+	$bulk->update(['account' => ['$eq' => $_SESSION['account']]],
+	['$set'=>['user_name' => $_POST['user_name'],//使用者登陸後儲存使用者id之類的常用資料。一旦儲存到SESSION中，其他頁面都可以通過SESSION獲取,SESSION的使用要開啟session
+				   'nName' => $_POST['nName'],//寫入資料設定
+				   'account' => $_SESSION['account'],
+				   'address' => $_POST['address'],
+				   'phone' => $_POST['phone'],
+				   ]]);//寫入資料設定
+	}			   
 $manager->executeBulkWrite('mydb.Userinfo', $bulk);//$manager->executeBulkWrite('寫入db.寫入資料表', $前面設的寫入變數);
-/*
-$bulk->update(['user_name' => $_POST['user_name'],//使用者登陸後儲存使用者id之類的常用資料。一旦儲存到SESSION中，其他頁面都可以通過SESSION獲取,SESSION的使用要開啟session
-			   'nName' => $_POST['nName'],//寫入資料設定
-			   'gender' => $_POST['gender'],
-			   'IDNumber' => $$doc['IDNumber'],
-			   'account' => $_SESSION['account'],
-			   'psd' => $doc['psd'],
-			   'address' => $_POST['address'],
-			   'phone' => $_POST['phone'],
-			   'admin' => "False",
-			   ]);
-$manager->executeBulkWrite('mydb.Userinfo', $bulk);//$manager->executeBulkWrite('寫入db.寫入資料表', $前面設的寫入變數);
-*/
 echo '<script>alert("修改成功");</script>';
 header("refresh:0;url=user_info.php");
 ?>

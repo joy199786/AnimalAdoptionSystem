@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/admin.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="Shortcut Icon" type="image/x-icon" href="ui_img/cbpig-57hae-001.ico"/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		</script>
 	</head>
@@ -60,6 +61,9 @@
 		  <a href="#" name="new_announcement_info.php">新增公告</a>
 		  <a href="#" name="admin_user.php">會員管理</a>
 		  <a href="#" name="admin_pet.php">動物管理</a>
+		  <a href="#" name="admin_adoption_form_View.php">紀錄查詢</a>
+		  <a href="#" name="admin_findpet.php">遺失管理</a>
+		  <a href="#" name="admin_second.php">二手管理</a>
 		  <a href="#" name="new_message_info.php">系統信件</a>
 		  <a href="#" name="showAdminMail.php">客服信件</a>
 		</div>
